@@ -1,0 +1,179 @@
+{
+    "scoring_weights": {
+      "interests": 1.5,
+      "values": 7.5,
+      "age": 0.65,
+      "coordinates": 0.015
+    },
+    "group1": [
+    {
+        "name": "Mentor 1",
+        "interests": [
+            "networking",
+            "cloud",
+            "storage",
+            "VMware",
+            "IoT"
+        ],
+        "values": [
+            "individuality"
+        ],
+        "age": "56",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    },
+    {
+        "name": "Mentor 2",
+        "interests": [
+            "networking",
+            "PowerShell",
+            "Python",
+            "Microsoft Azure",
+            "storage"
+        ],
+        "values": [
+            "spirituality"
+        ],
+        "age": "32",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    }
+    ,{
+        "name": "Mentor 3",
+        "interests": [
+            "HyperV",
+            "DevOps",
+            "networking",
+            "Javascript",
+            "VMware"
+        ],
+        "values": [
+            "individuality",
+            "freedom of speech"
+        ],
+        "age": "25",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    },
+    {
+        "name": "Mentor 4",
+        "interests": [
+            "programming",
+            "Microsoft Azure",
+            "PowerShell",
+            "Terraform",
+            "cloud"
+        ],
+        "values": [
+            "good food"
+        ],
+        "age": "37",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    },
+    {
+        "name": "Mentor 5",
+        "interests": [
+            "VMware",
+            "Terraform",
+            "Javascript",
+            "networking",
+            "KVM"
+        ],
+        "values": [
+            "love",
+            "relationships"
+        ],
+        "age": "26",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    }
+],
+    "group2": [
+    {
+        "name": "Mentee 1",
+        "interests": [
+            "DevOps",
+            "programming",
+            "PowerShell",
+            "networking",
+            "HyperV"
+        ],
+        "values": [
+            "individuality"
+        ],
+        "age": "22",
+        "coordinates": {
+            "lat": 47.62446091996251,
+            "long": -122.32016064226627
+        }
+    },
+    {
+        "name": "Mentee 2",
+        "interests": [
+            "cloud",
+            "KVM",
+            "programming",
+            "networking",
+            "VMware"
+        ],
+        "values": [
+            "family",
+            "love"
+        ],
+        "age": "26",
+        "coordinates": {
+            "lat": 47.62446091996251,
+            "long": -122.32016064226627
+    }
+    },
+    {
+        "name": "Mentee 3",
+        "interests": [
+            "artificial intelligence",
+            "networking",
+            "Javascript",
+            "Python",
+            "VMware"
+        ],
+        "values": [
+            "vegetarianism",
+            "individuality"
+        ],
+        "age": "39",
+        "coordinates": {
+            "lat": 47.62446091996251,
+            "long": -122.32016064226627
+    }
+    },
+    {
+        "name": "Mentee 4",
+        "interests": [
+            "artificial intelligence",
+            "HyperV",
+            "Microsoft Azure",
+            "networking",
+            "PowerShell"
+        ],
+        "values": [
+            "love",
+            "art"
+        ],
+        "age": "24",
+        "coordinates": {
+            "lat": 47.62446091996251,
+            "long": -122.32016064226627
+        }
+    }
+]
+}
