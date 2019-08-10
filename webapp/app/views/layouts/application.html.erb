@@ -13,8 +13,24 @@
       <%= link_to 'VDM Hackathon App', root_path, class: 'navbar-brand' %>
       <form class="form-inline">
         <% if user_signed_in? %>
-          <%= link_to 'Edit profile', edit_user_registration_path, class: 'btn btn-outline-primary'%>
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger'  %>
+        <div class="dropdown show">
+        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Skills
+        </a>
+          <div class="dropdown-menu">
+            <%= link_to 'My Skills', user_skills_path, class: 'dropdown-item'  %>
+            <%= link_to 'Skills', skills_path, class: 'dropdown-item'  %>
+          </div>
+        </div>
+        <div class="dropdown show">
+        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Profile
+        </a>
+        <div class="dropdown-menu">
+          <%= link_to 'Update My Profile', edit_user_registration_path, class: 'dropdown-item'%>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item'  %>
+        </div>
+      </div>
         <% else %>
           <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-outline-primary' %>
           <%= link_to 'Login', new_user_session_path, class: 'btn btn-outline-success'  %>

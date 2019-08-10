@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :matches
   resources :user_skills
   resources :skills
   devise_for :users, controllers: {
