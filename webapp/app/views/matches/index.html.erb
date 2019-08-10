@@ -10,11 +10,19 @@
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
+        <td><%= current_user.first_name %></td>
       </tr>
-    <% end %>
+    <tr>
+      <td>
+        <% @user_skills.each do |user_skill| %>
+        <%= user_skill.skill.title %>
+        <% end %>
+        </td>
+      </tr>
+    <tr>
+      <td>First <%= @result_first %></td>
+    </tr>
     <tr>
       <td><%= @result %></td>
     </tr>

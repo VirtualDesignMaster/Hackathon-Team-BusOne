@@ -4,7 +4,9 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @users = User.all
+    @user_skills = UserSkill.all.where(user_id: current_user)
+    @result = @user_skills
+    @result_first = @user_skills.first
   end
 
   # GET /matches/1
@@ -16,7 +18,130 @@ class MatchesController < ApplicationController
   def new
     @match = Match.new
     @user_skills = UserSkill.all.where(user_id: current_user)
-    
+
+    @result = `algo run matching/DatingAlgorithm/0.1.3 -d '{
+    "scoring_weights": {
+      "interests": 5.0,
+      "values": 2.0,
+      "age": 0.65,
+      "coordinates": 0.015
+    },
+    "group1": [
+    {
+        "name": "Rene van den Bedem",
+        "interests": [
+            "VCDX",
+            "NPX",
+            "Togaf",
+            "Enterprise Architect",
+            "Master Enterprise Architect"
+        ],
+        "values": [
+            "individuality"
+        ],
+        "age": "56",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    },
+    {
+        "name": "Timothy Patterson",
+        "interests": [
+            "AWS",
+            "PowerShell",
+            "Python",
+            "Devops",
+            "storage"
+        ],
+        "values": [
+            "spirituality"
+        ],
+        "age": "32",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    }
+    ,{
+        "name": "Lior Kamrat",
+        "interests": [
+            "HyperV",
+            "Azure",
+            "networking",
+            "Javascript",
+            "VMware"
+        ],
+        "values": [
+            "individuality",
+            "freedom of speech"
+        ],
+        "age": "25",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    },
+    {
+        "name": "Katarina Wagnerova",
+        "interests": [
+            "vmware",
+            "vrealize",
+            "PowerShell",
+            "Terraform",
+            "cloud"
+        ],
+        "values": [
+            "good food"
+        ],
+        "age": "37",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    },
+    {
+        "name": "Byron Schaller",
+        "interests": [
+            "Ansible",
+            "Terraform",
+            "Jenkins",
+            "Puppet",
+            "Chef"
+        ],
+        "values": [
+            "love",
+            "relationships"
+        ],
+        "age": "26",
+        "coordinates": {
+            "lat": 47.599088077746394,
+            "long": -122.3339125374332
+        }
+    }
+],
+    "group2": [
+    {
+        "name": "#{current_user.first_name}",
+        "interests": [
+            "VCDX",
+            "NPX",
+            "Togaf",
+            "Enterprise Architect",
+            "Master Enterprise Architect"
+        ],
+        "values": [
+            "love",
+            "art"
+        ],
+        "age": "24",
+        "coordinates": {
+            "lat": 47.62446091996251,
+            "long": -122.32016064226627
+        }
+    }
+]
+}' --timeout 300`
 
   end
 
